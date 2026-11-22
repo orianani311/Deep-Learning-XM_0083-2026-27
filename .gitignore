@@ -1,0 +1,5 @@
+mnist.pkl
+*-ubyte.gz
+__pycache__/
+.ipynb_checkpoints/
+.venv/
