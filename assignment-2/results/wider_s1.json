@@ -1,0 +1,38 @@
+{
+ "args": {
+  "dataset": "mnist",
+  "batch_size": 128,
+  "epochs": 5,
+  "learning_rate": 0.001,
+  "act": "relu",
+  "hidden_mult": 2,
+  "layers": 1,
+  "momentum": 0.0,
+  "init": "glorot",
+  "scale": true,
+  "seed": 1,
+  "name": "wider_s1"
+ },
+ "seconds": 104.28354406356812,
+ "epoch": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "val_acc": [
+  0.9218,
+  0.942,
+  0.9504,
+  0.9592,
+  0.963
+ ],
+ "train_loss": [
+  0.4038463281419055,
+  0.2222932645879003,
+  0.17134966184407457,
+  0.139803617369579,
+  0.11801578883421907
+ ]
+}

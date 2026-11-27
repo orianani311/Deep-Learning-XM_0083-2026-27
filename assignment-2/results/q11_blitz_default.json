@@ -1,0 +1,29 @@
+{
+ "args": {
+  "lr": 0.001,
+  "batch_size": 4,
+  "epochs": 2,
+  "optimizer": "sgd",
+  "momentum": 0.9,
+  "label_smoothing": 0.0,
+  "batchnorm": false,
+  "width": 1,
+  "augment": false,
+  "final": false,
+  "seed": 0,
+  "name": "q11_blitz_default"
+ },
+ "seconds": 87.97466278076172,
+ "epoch": [
+  1,
+  2
+ ],
+ "val_acc": [
+  0.4604,
+  0.5376
+ ],
+ "train_loss": [
+  1.755752532140414,
+  1.394508309759034
+ ]
+}
