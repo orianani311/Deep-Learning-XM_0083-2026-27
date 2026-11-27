@@ -1,25 +1,35 @@
 # Assignment 2: Automatic differentiation
 
-Backward functions worked out by hand, backpropagation with the `vugrad`
-library, and a classifier in PyTorch.
+Backward functions for tensor operations, the `vugrad` autodiff library
+(https://github.com/dlvu/vugrad), and an introduction to PyTorch.
 
 ## Contents
 
 | File | Description |
 |---|---|
-| `assignment_2.ipynb` | The code for all questions, with outputs |
+| `Assignment_2_Deliallisi.pdf` | The report, with all answers (questions 1 to 12) and an appendix |
+| `main.tex` | LaTeX source of the report |
+| `assignment_2.ipynb` | Numerical gradient checks (questions 1 to 4) and vugrad exploration (questions 5 to 7) |
+| `experiments.py` | ReLU op and MLP experiments in vugrad (questions 9 and 10) |
+| `pytorch_cifar.py` | CIFAR-10 classifier in PyTorch (questions 11 and 12) |
+| `gradcheck.py` | Automatic gradient check of all vugrad Ops (appendix A.1) |
+| `seeds_summary.py` | Mean and standard deviation over seeds (appendix A.2) |
+| `plot.py` | Plots validation accuracy and training loss from `results/` |
+| `results/` | Results of every run (JSON) |
 | `plots/` | The figures used in the report |
 
 ## Overview
 
-- **Part 1 (questions 1 to 4):** backward functions for element-wise division,
-  element-wise functions, an MLP layer without bias, and broadcasting.
-- **Part 2 (questions 5 to 10):** the computation graph in `vugrad`, a ReLU op, and
-  a change to the architecture.
-- **Part 3 (questions 11 and 12):** a classifier in PyTorch and hyperparameter
-  experiments.
+- **Questions 1 to 4:** derivations of backward functions, checked numerically with finite differences.
+- **Questions 5 to 8:** how vugrad builds and traverses the computation graph; proof of the `Normalize` backward.
+- **Question 9:** ReLU op; ReLU reaches 96.12% validation accuracy on MNIST vs 90.42% for sigmoid.
+- **Question 10:** width, depth, momentum and initialization.
+- **Questions 11 and 12:** hyperparameter search and other changes for the blitz network on CIFAR-10;
+  best setting (batch norm + data augmentation) reaches **67.54% test accuracy**.
+- **Appendix:** gradient check of every vugrad Op, and seed variation for question 10.
 
 ## Running the code
 
-Part 2 needs [vugrad](https://github.com/dlvu/vugrad): clone it and run
-`pip install -e .` in its folder. Then run the notebook cells from top to bottom.
+Install vugrad (`pip install -e .` in its repository), numpy, matplotlib, torch and torchvision.
+Run the scripts from inside this folder; the exact commands are in the report.
+MNIST and CIFAR-10 are downloaded on the first run and are not included in this repository.
